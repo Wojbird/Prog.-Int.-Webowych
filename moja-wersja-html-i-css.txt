@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<html>
+  <head>
+    <title>Lorem ipsum</title><meta />
+    <style>
+      .green-text {
+        color: green;
+      }
+
+      .smaller-image {
+        width: 400px;
+      }
+
+      h1 {
+        font-family: Lobster, monospace;
+      }
+
+      .silver-background {
+        background-color: silver;
+      }
+
+      .yellow-background {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1 class="green-text">Lorem ipsum</h1>
+      <a href="#"><img class="smaller-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Lorem_ipsum_design.svg/1024px-Lorem_ipsum_design.svg.png"></a>
+      <p class="silver-background">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
+    <p>Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin.</p>
+    <p class="silver-background">Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by advertisements for Letraset transfer sheets.[1] Lorem ipsum was introduced to the digital world in the mid-1980s, when Aldus employed it in graphic and word-processing templates for its desktop publishing program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted Lorem ipsum,[2] as have many LaTeX packages,[3][4][5] web content managers such as Joomla! and WordPress, and CSS libraries such as Semantic UI.</p>
+    </div>
+    <div>
+    <p>See also:</p>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Asemic_writing" target="_blank">Asemic writing</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Etaoin_shrdlu" target="_blank">Etaoin shrdlu</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Lenna" target="_blank">Lenna</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Li_Europan_lingues" target="_blank">Li Europan lingues</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_Latin_phrases" target="_blank">List of Latin phrases</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Metasyntactic_variable" target="_blank">Metasyntactic variable</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Pangram" target="_blank">Pangram</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/The_quick_brown_fox_jumps_over_the_lazy_dog" target="_blank">The quick brown fox jumps over the lazy dog</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/To_come_(publishing)" target="_blank">To come (TK)</a></li>
+    </ul>
+    </div>
+    <div class="yellow-background">
+    <p>Was the text useful?</p>
+    <label for="Yes"><input id="Yes" type="checkbox" name="utility"> Yes</label>
+    <label for="Maybe"><input id="Maybe" type="checkbox" name="utility"> Maybe</label><br>
+    <label for="No"><input id="No" type="checkbox" name="utility"> No</label>
+  </div>
+  </body>
+</html>
