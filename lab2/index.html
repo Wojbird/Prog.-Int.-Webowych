@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>To Do List</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <style>
+            #modal{
+                display: none;
+                z-index: 1;
+                position: fixed;
+                background-color: black;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-image: linear-gradient(315deg, blueviolet, deepskyblue);
+                min-height: 1000px;
+                font-size: 20px;
+                font-family: Century,serif;
+            }
+            div.container{
+                max-width: 450px;
+            }
+            h1{
+                font-size: 50px;
+                color: white;
+                justify-content: center;
+                display: flex;
+                padding: 100px;
+            }
+            header{
+                justify-content: center;
+                display: flex;
+                align-items: center;
+            }
+            li{
+                align-items: baseline;
+                justify-content: left;
+                display: flex;
+                margin: 10px;
+            }
+            header input{
+                font-size: 20px;
+                min-width: 25%;
+                border-radius: 5px;
+            }
+            .add{
+                background-color: dodgerblue;
+                color: white;
+                height: 32px;
+                width: 64px;
+                border-radius: 5px;
+            }
+            .add:hover{
+                background-color: white;
+                color: dodgerblue;
+            }
+            .showbtn{
+                background-color: gray;
+                color: white;
+                height: 32px;
+                width: 64px;
+                border-radius: 5px;
+            }
+            .showbtn:hover{
+                background-color: white;
+                color: gray;
+            }
+            .hidebtn{
+                background-color: red;
+                color: white;
+                height: 32px;
+                width: 32px;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+            .hidebtn:hover{
+                background-color: white;
+                color: red;
+                margin-right: 10px;
+            }
+            .unchecked{
+                color: black;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            .checked{
+                color: gray;
+                text-decoration: line-through;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>To do list</h1>
+            <header>
+                <input id="input" type="text" placeholder="To do...">
+                <button class="add" onclick="addToDo()">Add</button>
+                <button class="showbtn" onclick="undoToDo()">Undo</button>
+            </header>
+            <div>
+                <ul id="list">
+
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="app.js"></script>
