@@ -55,8 +55,8 @@ const Main = (props) => {
 
     return (
         <div class="main">
-            <input id="dscr1" type="text" value={newName} onChange={handleNewName} placeholder="Names"/>
-            <input id="dscr1" type="text" value={newEmail} onChange={handleNewEmail} placeholder="E-mails"/>
+            <input id="dscr1" type="text" value={newName} onChange={handleNewName} placeholder="Name"/>
+            <input id="dscr1" type="text" value={newEmail} onChange={handleNewEmail} placeholder="E-mail"/>
             <br/>
             <input id="dscr1" type="text" value={newTags} onChange={handleNewTags} placeholder="[Tags]"/>
             <input id="dscr1" type="text" value={newCourses} onChange={handleNewCourses} placeholder="Courses"/>
