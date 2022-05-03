@@ -1,23 +1,23 @@
 [
-  {
-    "name": "Dave",
-    "e-mail": "dave.smith@gmail.com",
-    "tags": "[IT][frontend]",
-    "courses": "Web Interfaces Design",
-    "description": "I'm the best."
-  },
-  {
-    "name": "Sophie",
-    "e-mail": "sophie.brown@outlook.com",
-    "tags": "[IT][backend]",
-    "courses": "Databases",
-    "description": "I'm the fastest."
-  },
-  {
-    "name": "Jan",
-    "e-mail": "jan.kowalski@wp.pl",
-    "tags": "[Piwo][to][moje][paliwo]",
-    "courses": "PIWo",
-    "description": "Piwo to moje paliwo."
-  }
+  [
+    "Dave",
+    "dave.smith@gmail.com",
+    "[IT][frontend]",
+    "Web Interfaces Design",
+    "I'm the best."
+  ],
+  [
+    "Sophie",
+    "sophie.brown@outlook.com",
+    "[IT][backend]",
+    "Databases",
+    "I'm the fastest."
+  ],
+  [
+    "Jan",
+    "jan.kowalski@wp.pl",
+    "[Piwo][to][moje][paliwo]",
+    "PIWo",
+    "Piwo to moje paliwo."
+  ]
 ]

@@ -4,11 +4,13 @@ import ReactDOM from "react-dom";
 const Main = (props) => {
     const { setToDoList, toDosList } = props;
 
-    const [newName, setNewName] = useState("");
-    const [newEmail, setNewEmail] = useState("");
-    const [newTags, setNewTags] = useState("");
-    const [newCourses, setNewCourses] = useState("");
-    const [newDescription, setNewDescription] = useState("");
+    const [newName, setNewName] = useState();
+    const [newEmail, setNewEmail] = useState();
+    const [newTags, setNewTags] = useState();
+    const [newCourses, setNewCourses] = useState();
+    const [newDescription, setNewDescription] = useState();
+
+    const [data, setData] = useState();
 
     const handleNewName = (event) => {
         setNewName(event.target.value);
@@ -30,19 +32,28 @@ const Main = (props) => {
         setNewDescription(event.target.value);
     };
 
-    const getApiData = () => {
+    const getApiData = async () => {
         fetch('./data.json')
             .then(response => {
                 return response.json();
             })
-            .then(data => {
-                for (let i = 0; i < data.length; i++){
-                    setToDoList(toDosList.concat([[data[i].name, data[i].email, data[i].tags, data[i].courses, data[i].description]]));
-                }
+            .then(newdata => {
+                appandData(newdata);
             })
             .catch(err => {
                 console.log('error: ' + err);
             });
+    }
+
+    const appandData = (newdata) => {
+        for (let i = 0; i < newdata.length; i++){
+            setNewName(newdata[i][0]);
+            setNewEmail(newdata[i][1]);
+            setNewTags(newdata[i][2]);
+            setNewCourses(newdata[i][3]);
+            setNewDescription(newdata[i][4]);
+            setToDoList(toDosList.concat([[newName, newEmail, newTags, newCourses, newDescription]]));
+        }
     }
 
     const handleAddNewItem = () => {

@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
 
 const Groups = (props) => {
     const { setGroupList, groupList } = props;
 
-    const [newName, setNewName] = useState("");
-    const [newTags, setNewTags] = useState("");
-    const [newCourses, setNewCourses] = useState("");
-    const [newMember1, setNewMember1] = useState("");
-    const [newEmail1, setNewEmail1] = useState("");
-    const [newMember2, setNewMember2] = useState("");
-    const [newEmail2, setNewEmail2] = useState("");
-    const [newMember3, setNewMember3] = useState("");
-    const [newEmail3, setNewEmail3] = useState("");
-    const [newMember4, setNewMember4] = useState("");
-    const [newEmail4, setNewEmail4] = useState("");
-    const [newMember5, setNewMember5] = useState("");
-    const [newEmail5, setNewEmail5] = useState("");
-    const [newDescription, setNewDescription] = useState("");
+    const [newName, setNewName] = useState();
+    const [newTags, setNewTags] = useState();
+    const [newCourses, setNewCourses] = useState();
+    const [newMember1, setNewMember1] = useState();
+    const [newEmail1, setNewEmail1] = useState();
+    const [newMember2, setNewMember2] = useState();
+    const [newEmail2, setNewEmail2] = useState();
+    const [newMember3, setNewMember3] = useState();
+    const [newEmail3, setNewEmail3] = useState();
+    const [newMember4, setNewMember4] = useState();
+    const [newEmail4, setNewEmail4] = useState();
+    const [newMember5, setNewMember5] = useState();
+    const [newEmail5, setNewEmail5] = useState();
+    const [newDescription, setNewDescription] = useState();
 
     const handleNewName = (event) => {
         setNewName(event.target.value);
