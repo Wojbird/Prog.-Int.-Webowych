@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
+import axios from "axios";
 
 const Main = (props) => {
     const { setToDoList, toDosList } = props;
@@ -9,8 +9,6 @@ const Main = (props) => {
     const [newTags, setNewTags] = useState();
     const [newCourses, setNewCourses] = useState();
     const [newDescription, setNewDescription] = useState();
-
-    const [data, setData] = useState();
 
     const handleNewName = (event) => {
         setNewName(event.target.value);
@@ -31,30 +29,6 @@ const Main = (props) => {
     const handleNewDescription = (event) => {
         setNewDescription(event.target.value);
     };
-
-    const getApiData = async () => {
-        fetch('./data.json')
-            .then(response => {
-                return response.json();
-            })
-            .then(newdata => {
-                appandData(newdata);
-            })
-            .catch(err => {
-                console.log('error: ' + err);
-            });
-    }
-
-    const appandData = (newdata) => {
-        for (let i = 0; i < newdata.length; i++){
-            setNewName(newdata[i][0]);
-            setNewEmail(newdata[i][1]);
-            setNewTags(newdata[i][2]);
-            setNewCourses(newdata[i][3]);
-            setNewDescription(newdata[i][4]);
-            setToDoList(toDosList.concat([[newName, newEmail, newTags, newCourses, newDescription]]));
-        }
-    }
 
     const handleAddNewItem = () => {
         if(newName!==""&&newEmail!==""&&newTags!==""&&newCourses!==""&&newDescription!==""){
@@ -81,7 +55,22 @@ const Main = (props) => {
     });
 
     useEffect(() => {
-        getApiData();
+        axios.get("http://localhost:3000/public/apiData/data.json")
+            .then(response => {
+                console.log(response.data);
+                const users = response.data;
+                for (let i = 0; i < users.length; i++){
+                    setNewName(users[i].name);
+                    setNewEmail(users[i].email);
+                    setNewTags(users[i].tags);
+                    setNewCourses(users[i].courses);
+                    setNewDescription(users[i].description);
+                    setToDoList(toDosList.concat([[newName, newEmail, newTags, newCourses, newDescription]]));
+                }
+            })
+            .catch(err => {
+                console.log('error: ' + err);
+            });
     }, []);
 
     return (
