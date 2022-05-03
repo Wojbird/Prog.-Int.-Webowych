@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Dave",
+    "e-mail": "dave.smith@gmail.com",
+    "tags": "[IT][frontend]",
+    "courses": "Web Interfaces Design",
+    "description": "I'm the best."
+  },
+  {
+    "name": "Sophie",
+    "e-mail": "sophie.brown@outlock.com",
+    "tags": "[IT][backend]",
+    "courses": "Databases",
+    "description": "I'm the fastest."
+  },
+  {
+    "name": "Jan",
+    "e-mail": "jan.kowalski@wp.pl",
+    "tags": "[Piwo][to][moje][paliwo]",
+    "courses": "PIWo",
+    "description": "Piwo to moje paliwo."
+  }
+]

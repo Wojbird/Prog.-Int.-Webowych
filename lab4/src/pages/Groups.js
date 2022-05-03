@@ -131,7 +131,7 @@ const Groups = (props) => {
             <input id="dscr1" type="text" value={newMember5} onChange={handleNewMember5} placeholder="Member5"/>
             <input id="dscr1" type="text" value={newEmail5} onChange={handleNewEmail5} placeholder="E-mail"/>
             <br/>
-            <input id="dscr2" type="text" value={newDescription} onChange={handleNewDescription} placeholder="Discription..." />
+            <input id="dscr2" type="text" value={newDescription} onChange={handleNewDescription} placeholder="Description..." />
             <input id="btn1" type="button" value="Add announcement" onClick={handleAddNewItem} />
             {groupListHTML}
         </div>

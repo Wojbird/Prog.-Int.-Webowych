@@ -61,7 +61,7 @@ const Main = (props) => {
             <input id="dscr1" type="text" value={newTags} onChange={handleNewTags} placeholder="[Tags]"/>
             <input id="dscr1" type="text" value={newCourses} onChange={handleNewCourses} placeholder="Courses"/>
             <br/>
-            <input id="dscr2" type="text" value={newDescription} onChange={handleNewDescription} placeholder="Discription..." />
+            <input id="dscr2" type="text" value={newDescription} onChange={handleNewDescription} placeholder="Description..." />
             <input id="btn1" type="button" value="Add announcement" onClick={handleAddNewItem} />
             {toDosListHTML}
         </div>
