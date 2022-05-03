@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 
 const Main = (props) => {
     const { setToDoList, toDosList } = props;
@@ -29,6 +30,21 @@ const Main = (props) => {
         setNewDescription(event.target.value);
     };
 
+    const getApiData = () => {
+        fetch('./data.json')
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                for (let i = 0; i < data.length; i++){
+                    setToDoList(toDosList.concat([[data[i].name, data[i].email, data[i].tags, data[i].courses, data[i].description]]));
+                }
+            })
+            .catch(err => {
+                console.log('error: ' + err);
+            });
+    }
+
     const handleAddNewItem = () => {
         if(newName!==""&&newEmail!==""&&newTags!==""&&newCourses!==""&&newDescription!==""){
             setToDoList(toDosList.concat([[newName, newEmail, newTags, newCourses, newDescription]]));
@@ -52,6 +68,10 @@ const Main = (props) => {
             </div>
         )
     });
+
+    useEffect(() => {
+        getApiData();
+    }, []);
 
     return (
         <div class="main">
