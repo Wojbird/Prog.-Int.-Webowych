@@ -44,3 +44,6 @@ function App() {
 
 // }
 export default App;
+
+//npm init @eslint/config
+//npx eslint yourfile.js
